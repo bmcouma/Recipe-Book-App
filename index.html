@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Recipe Book App to search, view, and add your favorite recipes.">
+    <title>Recipe Book App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <h1>Recipe Book App</h1>
+            <p>Your personal collection of recipes, all in one place.</p>
+        </div>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="dark-mode-button">Dark Mode</button>
+    </header>
+
+    <main class="container">
+        <!-- Search bar for filtering recipes -->
+        <section class="search-section">
+            <h2>Search Recipes</h2>
+            <div class="search-bar">
+                <label for="search-input" class="visually-hidden">Search Recipes</label>
+                <input type="text" id="search-input" placeholder="Search recipes..." aria-label="Search recipes">
+                <button id="search-button" aria-label="Search">Search</button>
+            </div>
+        </section>
+
+        <!-- Recipe categories -->
+        <section class="category-section">
+            <h2>Filter by Category</h2>
+            <select id="category-select" aria-label="Filter recipes by category">
+                <option value="all">All</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="desserts">Desserts</option>
+            </select>
+        </section>
+
+        <!-- Recipe list -->
+        <section class="recipe-section">
+            <h2>Recipe List</h2>
+            <ul id="recipe-list" class="recipe-list">
+                <!-- Example recipe item -->
+                <li class="recipe-item">
+                    <img src="https://via.placeholder.com/150" alt="Recipe Image" class="recipe-image">
+                    <div class="recipe-details">
+                        <h3 class="recipe-title">Recipe Title</h3>
+                        <p class="recipe-description">Short description of the recipe.</p>
+                        <a href="#" class="recipe-link" target="_blank">View Recipe</a>
+                    </div>
+                </li>
+                <!-- Dynamic recipes will be added here -->
+            </ul>
+        </section>
+
+        <!-- Add recipe form -->
+        <section class="add-recipe-section">
+            <h2>Add a New Recipe</h2>
+            <form id="add-recipe-form" class="add-recipe-form">
+                <label for="recipe-title">Recipe Title</label>
+                <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+
+                <label for="recipe-description">Recipe Description</label>
+                <textarea id="recipe-description" placeholder="Recipe Description" required></textarea>
+
+                <label for="recipe-image">Image URL</label>
+                <input type="url" id="recipe-image" placeholder="Image URL" required>
+
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2025 Recipe Book App. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
